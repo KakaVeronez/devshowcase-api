@@ -25,6 +25,10 @@ public class Project {
     @URL
     private String repositoryUrl;
 
+    private Long upvotes = 0L;
+
+    private Double averageRating = 0.0;
+
     @ManyToOne
     @JoinColumn(name = "profile_id", nullable = false)
     private Profile profile;
@@ -61,6 +65,12 @@ public class Project {
 
     public String getRepositoryUrl() { return repositoryUrl; }
     public void setRepositoryUrl(String repositoryUrl) { this.repositoryUrl = repositoryUrl; }
+
+    public Long getUpvotes() { return upvotes; }
+    public void setUpvotes(Long upvotes) { this.upvotes = upvotes; }
+
+    public Double getAverageRating() { return averageRating; }
+    public void setAverageRating(Double averageRating) { this.averageRating = averageRating; }
 
     public Profile getProfile() { return profile; }
     public void setProfile(Profile profile) { this.profile = profile; }

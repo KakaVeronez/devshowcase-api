@@ -1,4 +1,4 @@
-# Etapa 1: Build da aplicação com Maven e OpenJDK 17
+# Etapa 1: Build da aplicação com Maven e Java 17
 FROM maven:3.8.4-openjdk-17 AS build
 WORKDIR /app
 COPY . .

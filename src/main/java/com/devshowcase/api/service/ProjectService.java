@@ -29,8 +29,8 @@ public class ProjectService {
                 .orElseThrow(() -> new ResourceNotFoundException("Projeto não encontrado com ID: " + projectId));
 
         Feedback feedback = new Feedback();
-        feedback.setRating(dto.rating());
-        feedback.setComment(dto.comment());
+        feedback.setRating(dto.getRating());
+        feedback.setComment(dto.getComment());
         feedback.setProject(project);
 
         feedbackRepository.save(feedback);
